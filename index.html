@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header></header>
+
+    <main class="main_SignIn">
+      <section class="main_section">
+        <div class="container">
+          <h1 class="heroTitle">Sign in to GIGI</h1>
+          <div class="main_account">
+            <p>Don't have an account?</p>
+            <a class="main_linkSignUp" href=""> Sign up</a>
+          </div>
+          <form id="loginForm">
+            <label for="email"> </label>
+            <p class="input_text">Email</p>
+            <input id="email" type="email" name="email" />
+            <span id="emailError"> </span>
+
+            <label for="password"> </label>
+            <p class="input_text">Password</p>
+            <input id="password" type="text" name="password" />
+            <span id="passwordError"></span>
+          </form>
+
+          <div>
+            <a class="main_linkForgotPassword" href="">Forgot password?</a>
+          </div>
+
+          <button type="button" id="submitButton" class="btn">Sign in</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <a class="footer_linkForSupport" href="">Contact customer support</a>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>

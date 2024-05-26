@@ -1,0 +1,169 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    position: relative;
+    color: inherit
+}
+
+
+li {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+
+    margin-bottom: 10px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+
+    color: #333;
+
+    border: 1px solid #ccc;
+
+    border-radius: 4px;
+    background-color: #fff;
+
+    box-sizing: border-box;
+
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    transition: border-color 0.3s, box-shadow 0.3s;
+    ;
+
+}
+
+button {
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    width: 100%;
+    margin: 30px 0px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    background-color: #eec378;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+
+button:hover {
+    background-color: #d89a3730;
+
+}
+
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(147, 93, 19, 0.5);
+
+}
+
+
+.header_logo {
+    width: 190px;
+    height: 90px;
+}
+
+.heroTitle {
+    text-align: center;
+}
+
+.container {
+    max-width: 1240px;
+    width: 30%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+
+}
+
+.main_section {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.main_linkSignUp {
+    font-weight: bold;
+    text-decoration-thickness: 2px;
+}
+
+.main_linkSignUp::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    border-bottom: 2px solid black;
+
+}
+
+
+.main_account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+
+}
+
+.main_account_signUp p {
+    margin-right: 10px;
+}
+
+.input_text {
+    margin-bottom: 3px;
+    color: darkgrey;
+}
+
+span {
+    color: red;
+
+}
+
+input[type="password"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.main_linkForgotPassword {
+
+    font-weight: bold;
+    text-decoration-thickness: 2px;
+}
+
+footer {
+    text-align: center;
+}
+
+.footer_linkForSupport::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    border-bottom: 2px solid black;
+
+}
