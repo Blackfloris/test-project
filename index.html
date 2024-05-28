@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="import" href="./createAnAccount.html" />
+    <script src="script.js" defer></script>
     <title>Document</title>
   </head>
   <body>
@@ -15,18 +17,18 @@
           <h1 class="heroTitle">Sign in to GIGI</h1>
           <div class="main_account">
             <p>Don't have an account?</p>
-            <a class="main_linkSignUp" href=""> Sign up</a>
+            <a id="linkSignUp" class="main_linkSignUp" href=""> Sign up</a>
           </div>
           <form id="loginForm">
-            <label for="email"> </label>
+            <!-- <label for="email"> </label> -->
             <p class="input_text">Email</p>
-            <input id="email" type="email" name="email" />
-            <span id="emailError"> </span>
+            <input id="emailSignIn" type="email" name="email" />
+            <span id="emailErrorSignIn"> </span>
 
-            <label for="password"> </label>
+            <!-- <label for="password"> </label> -->
             <p class="input_text">Password</p>
-            <input id="password" type="text" name="password" />
-            <span id="passwordError"></span>
+            <input id="passwordSignIn" type="text" name="password" />
+            <span id="passwordErrorSignIn"></span>
           </form>
 
           <div>
@@ -41,5 +43,4 @@
       <a class="footer_linkForSupport" href="">Contact customer support</a>
     </footer>
   </body>
-  <script src="script.js"></script>
 </html>

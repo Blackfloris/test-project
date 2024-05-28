@@ -1,0 +1,74 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="headerCreateAccount">
+      <button class="btnSignIn">Sign in</button>
+    </header>
+    <main class="main_SignIn">
+      <section class="main_section">
+        <div class="container">
+          <h1 class="heroTitle">Create an account</h1>
+          <form id="formCreateAccount">
+            <div class="form-group">
+              <!-- <label for="First name"> </label> -->
+              <p class="input_text">
+                First name
+                <span class="sup">*</span>
+              </p>
+              <input id="firstName" type="text" name="firstName" />
+              <span id="firstNameError"></span>
+            </div>
+            <div class="form-group">
+              <!-- <label for="Last name"> </label> -->
+              <p class="input_text">
+                Last name
+                <span class="sup">*</span>
+              </p>
+              <input id="lastName" type="text" name="lastName" />
+              <span id="lastNameError"></span>
+            </div>
+            <div class="form-group">
+              <!-- <label for="email"> </label> -->
+              <p class="input_text">
+                Email
+                <span class="sup">*</span>
+              </p>
+              <input id="email" type="email" name="email" />
+              <span id="emailError"> </span>
+            </div>
+            <div class="form-group">
+              <!-- <label for="Create password"> </label> -->
+              <p class="input_text">
+                Create Password
+                <span class="sup">*</span>
+              </p>
+              <input id="password" type="text" name="password" />
+              <span id="passwordError"></span>
+            </div>
+            <div class="form-group checkbox-group">
+              <input
+                class="checkboxIAgree"
+                type="checkbox"
+                id="subscribe"
+                name="subscribe"
+                value="newsletter"
+              />
+              <p>By continuing I agree</p>
+            </div>
+          </form>
+          <button type="button" id="btnCreateAccount" disabled>
+            Create a free account
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
