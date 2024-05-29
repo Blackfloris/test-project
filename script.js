@@ -49,30 +49,52 @@ function handleSubmit(event) {
 
   if (!validateName(firstName)) {
     isValid = false;
-    if (firstNameError) {
+    if (firstName > 2 || firstName < 25) {
       firstNameError.textContent =
-        "First name must be between 2 and 25 characters long and cannot contain special characters (@, $, !, %, *, #, ?, &).";
+        "First name must be between 2 and 25 characters long";
+    } else if (/[@$!%*#?&]/.test(firstName)) {
+      firstNameError.textContent =
+        "First name cannot contain special characters (@, $, !, %, *, #, ?, &).";
     }
   }
 
   if (!validateName(lastName)) {
     isValid = false;
-    if (lastNameError) {
+    if (lastName > 2 || lastName < 25) {
       lastNameError.textContent =
-        "Last name must be between 2 and 25 characters long and cannot contain special characters (@, $, !, %, *, #, ?, &).";
+        "Last name must be between 2 and 25 characters long";
+    } else if (/[@$!%*#?&]/.test(lastName)) {
+      lastNameError.textContent =
+        "Last name cannot contain special characters (@, $, !, %, *, #, ?, &).";
     }
   }
 
   if (!validateEmail(email)) {
     isValid = false;
-    emailError.textContent =
-      "Email must be between 8 and 20 characters long, cannot contain spaces, and must be a valid email address.";
+    if (email.includes(" ")) {
+      emailError.textContent = "Email cannot contain spaces.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      emailError.textContent = "Email must be a valid email address.";
+    } else if (email.length < 8 || email.length > 20) {
+      emailError.textContent =
+        "Email must be between 8 and 20 characters long.";
+    }
   }
 
   if (!validatePassword(password)) {
     isValid = false;
-    passwordError.textContent =
-      "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character (@, $, !, %, *, #, ?, &).";
+    if (password.length < 8) {
+      passwordError.textContent =
+        "Password must be at least 8 characters long ";
+    } else if (/[A-Za-z]/.test(password)) {
+      passwordError.textContent =
+        "Password must contain at least one uppercase letter, one lowercase letter ";
+    } else if (/\d/.test(password)) {
+      passwordError.textContent = "Password must contain one digit ";
+    } else if (/[@$!%*#?&]/.test(password)) {
+      passwordError.textContent =
+        "Password must contain one special character (@, $, !, %, *, #, ?, &).";
+    }
   }
 
   if (isValid) {
@@ -94,17 +116,29 @@ function handleSignInSubmit(event) {
 
   if (!validateEmail(emailSignIn)) {
     isValid = false;
-    if (emailErrorSignIn) {
+    if (emailSignIn.includes(" ")) {
+      emailErrorSignIn.textContent = "Email cannot contain spaces.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailSignIn)) {
+      emailErrorSignIn.textContent = "Email must be a valid email address.";
+    } else if (emailSignIn.length < 8 || emailSignIn.length > 20) {
       emailErrorSignIn.textContent =
-        "Email must be between 8 and 20 characters long, cannot contain spaces, and must be a valid email address.";
+        "Email must be between 8 and 20 characters long.";
     }
   }
 
   if (!validatePassword(passwordSignIn)) {
     isValid = false;
-    if (passwordErrorSignIn) {
+    if (passwordSignIn.length < 8) {
       passwordErrorSignIn.textContent =
-        "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character (@, $, !, %, *, #, ?, &).";
+        "Password must be at least 8 characters long ";
+    } else if (/[A-Za-z]/.test(passwordSignIn)) {
+      passwordErrorSignIn.textContent =
+        "Password must contain at least one uppercase letter, one lowercase letter ";
+    } else if (/\d/.test(passwordSignIn)) {
+      passwordErrorSignIn.textContent = "Password must contain one digit ";
+    } else if (/[@$!%*#?&]/.test(passwordSignIn)) {
+      passwordErrorSignIn.textContent =
+        "Password must contain one special character (@, $, !, %, *, #, ?, &).";
     }
   }
   if (isValid) {
