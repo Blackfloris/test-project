@@ -3,6 +3,7 @@ function addEventHandler() {
   const createAccountButton = document.getElementById("btnCreateAccount");
   const linkSignUp = document.getElementById("linkSignUp");
   const checkBox = document.getElementById("subscribe");
+  const logoutButton = document.getElementById("logout");
 
   if (submitButton) {
     submitButton.addEventListener("click", handleSignInSubmit);
@@ -24,6 +25,9 @@ function addEventHandler() {
     checkBox.addEventListener("change", function () {
       createAccountButton.disabled = !checkBox.checked;
     });
+  }
+  if (logoutButton) {
+    logoutButton.addEventListener("click", handleLogout);
   }
 }
 
@@ -98,9 +102,18 @@ function handleSubmit(event) {
   }
 
   if (isValid) {
+    const user = {
+      firstName,
+      lastName,
+      email,
+      password,
+    };
+    localStorage.setItem(email, JSON.stringify(user));
+
     window.location.href = "http://127.0.0.1:5500/index.html";
   }
 }
+
 function handleSignInSubmit(event) {
   event.preventDefault();
   console.log("ggg");
@@ -142,7 +155,18 @@ function handleSignInSubmit(event) {
     }
   }
   if (isValid) {
-    window.location.href = "http://127.0.0.1:5500/createAnAccount.html";
+    const savedUser = localStorage.getItem(emailSignIn);
+    if (savedUser) {
+      const user = JSON.parse(savedUser);
+      if (user.password === passwordSignIn) {
+        localStorage.setItem("currentUser", emailSignIn);
+        window.location.href = "http://127.0.0.1:5500/userPage.html";
+      } else {
+        passwordErrorSignIn.textContent = "Incorrect password.";
+      }
+    } else {
+      emailErrorSignIn.textContent = "No user found with this email.";
+    }
   }
 }
 
@@ -209,4 +233,7 @@ function validatePassword(password) {
   }
   const isLengthValid = password.length >= 8;
   return isLengthValid && hasLetter && hasDigit && hasSpecialChar;
+}
+function handleLogout() {
+  window.location.href = "http://127.0.0.1:5500/index.html";
 }
