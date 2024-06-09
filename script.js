@@ -249,7 +249,7 @@ function handleLogout() {
   window.location.href = "http://127.0.0.1:5500/index.html";
 }
 
-function addEventHandler() {
+function addEventUser() {
   const currentUserEmail = localStorage.getItem("currentUser");
   if (currentUserEmail) {
     const currentUser = JSON.parse(localStorage.getItem(currentUserEmail));
