@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,7 +8,9 @@
   </head>
   <body>
     <header class="headerCreateAccount">
-      <button class="btnSignIn">Sign in</button>
+      <button type="submit" id="submitButtonForAccount" class="btnSignIn">
+        Sign in
+      </button>
     </header>
     <main class="main_SignIn">
       <section class="main_section">
@@ -16,7 +18,6 @@
           <h1 class="heroTitle">Create an account</h1>
           <form id="formCreateAccount">
             <div class="form-group">
-              <!-- <label for="First name"> </label> -->
               <p class="input_text">
                 First name
                 <span class="sup">*</span>
@@ -25,7 +26,6 @@
               <span id="firstNameError"></span>
             </div>
             <div class="form-group">
-              <!-- <label for="Last name"> </label> -->
               <p class="input_text">
                 Last name
                 <span class="sup">*</span>
@@ -34,22 +34,20 @@
               <span id="lastNameError"></span>
             </div>
             <div class="form-group">
-              <!-- <label for="email"> </label> -->
               <p class="input_text">
                 Email
                 <span class="sup">*</span>
               </p>
-              <input id="email" type="email" name="email" />
-              <span id="emailError"> </span>
+              <input id="createEmail" type="email" name="createEmail" />
+              <span id="createEmailError"> </span>
             </div>
             <div class="form-group">
-              <!-- <label for="Create password"> </label> -->
               <p class="input_text">
                 Create Password
                 <span class="sup">*</span>
               </p>
-              <input id="password" type="text" name="password" />
-              <span id="passwordError"></span>
+              <input id="createPassword" type="text" name="createPassword" />
+              <span id="createPasswordError"></span>
             </div>
             <div class="form-group checkbox-group">
               <input
@@ -59,16 +57,17 @@
                 name="subscribe"
                 value="newsletter"
               />
-              <p>By continuing I agree</p>
+              <label for="subscribe">By continuing I agree</label>
             </div>
+            <button id="btnCreateAccount" type="submit">
+              Create a free account
+            </button>
           </form>
-          <button type="button" id="btnCreateAccount" disabled>
-            Create a free account
-          </button>
         </div>
       </section>
     </main>
     <footer></footer>
-    <script src="./script.js"></script>
+    <script src="./scriptIndex.js" defer></script>
+    <script src="./scriptCreateAnAccount.js" defer></script>
   </body>
 </html>

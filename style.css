@@ -72,6 +72,18 @@ button:focus {
 
 }
 
+.headerCreateAccount {
+    display: flex;
+    justify-content: end;
+
+}
+
+.btnSignIn {
+    width: 100px;
+    margin: 30px;
+
+
+}
 
 .header_logo {
     width: 190px;
@@ -152,6 +164,25 @@ input[type="password"] {
 
     font-weight: bold;
     text-decoration-thickness: 2px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+
+}
+
+
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    box-shadow: none;
+    margin-right: 10px;
+    box-shadow: none;
+    padding: 0;
+    margin: 10px;
+    width: auto;
+    height: auto;
 }
 
 footer {
