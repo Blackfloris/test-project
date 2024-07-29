@@ -1,3 +1,10 @@
+const btnLogout = document
+  .getElementById("logout")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    window.location.href = `${window.location.origin}/index.html`;
+  });
+
 const color = [
   "rgba(57, 79, 245, 0.8)",
   "rgba(56, 187, 255, 0.52)",
